@@ -91,14 +91,25 @@ let totalmonths = finances.length
 console.log("Financial Analysis")
 console.log("Total Months", finances.length);
 
-totalprofit = 0
+let totalprofit = 0
+// let highestProfit = finances[i][1]
+// let highestloss = finances[i][1]
 
 for (i=0; i<finances.length; i++) {
 
     totalprofit = totalprofit+finances[i][1]
-    console.log("Total Profit" + "$" + 
-totalprofit);
+   
 }
+console.log("Total Profit", "$",
+totalprofit)
+// if(finances[i] > highestProfit){ 
+//     highestProfit = finances[i][0];
+// }
+// else if(finances[i] < highestloss)
+// smallest = finances[i][0];
+// console.log("Highest Profit", "is", highestProfit);
+
+
 
 
 
