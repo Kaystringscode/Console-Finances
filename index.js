@@ -92,22 +92,34 @@ console.log("Financial Analysis")
 console.log("Total Months", finances.length);
 
 let totalprofit = 0
-// let highestProfit = finances[i][1]
-// let highestloss = finances[i][1]
+let changes = finances[1][1];
+let totalchanges = 0
+let greatestIncrease = 0
+let greatestdecrease = 0
+let j = 0
 
-for (i=0; i<finances.length; i++) {
 
-    totalprofit = totalprofit+finances[i][1]
-   
+
+for (let i=0; i<finances.length; i++) {
+
+ totalprofit = totalprofit+finances[i][1]
+ 
+ if( finances[i][1] > greatestIncrease) 
+greatestIncrease = finances[i][1]
+else if(finances[i][1] < greatestdecrease)   
+greatestdecrease = finances[i][1]
+
 }
-console.log("Total Profit", "$",
-totalprofit)
-// if(finances[i] > highestProfit){ 
-//     highestProfit = finances[i][0];
-// }
-// else if(finances[i] < highestloss)
-// smallest = finances[i][0];
-// console.log("Highest Profit", "is", highestProfit);
+
+console.log("Net Total Profit", "$",totalprofit);
+
+for (let i = 0; i < finances.length-1; i++){
+
+  changes = changes + (finances[i + 1][1] - finances[i][1]);
+}
+
+let averageChanges = changes/finances.length;
+console.log("average change", "$", averageChanges);
 
 
 
@@ -116,3 +128,25 @@ totalprofit)
 
 
 
+//  
+
+ 
+
+AverageChange = changes / totalmonths
+
+console.log("Total Monthly Changes", "$", changes);
+console.log("Average Change", "$", AverageChange);
+console.log("Greatest increase in profits", "Feb-2012",  "$", greatestIncrease);
+console.log("Greatest decrease in profits", "Sep-2013",  "$", greatestdecrease);
+
+
+for (let j=0; j<finances.length; j++){
+
+}
+//   changes = finances[i][1] - finances[i-1][1]
+
+//   totalchanges = totalchanges + changes  
+// console.log(TotalMonthlyChanges)
+// finances[i + 1][1] - finances[i][1]
+   
+  // changes = finances[i][1]  - finances[i-1][1]
