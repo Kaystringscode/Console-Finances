@@ -96,8 +96,6 @@ let changes = finances[1][1];
 let totalchanges = 0
 let greatestIncrease = 0
 let greatestdecrease = 0
-let j = 0
-
 
 
 for (let i=0; i<finances.length; i++) {
@@ -113,40 +111,7 @@ greatestdecrease = finances[i][1]
 
 console.log("Net Total Profit", "$",totalprofit);
 
-for (let i = 0; i < finances.length-1; i++){
-
-  changes = changes + (finances[i + 1][1] - finances[i][1]);
-}
-
-let averageChanges = changes/finances.length;
+let averageChanges = totalprofit/finances.length;
 console.log("average change", "$", averageChanges);
-
-
-
-
-
-
-
-
-//  
-
- 
-
-AverageChange = changes / totalmonths
-
-console.log("Total Monthly Changes", "$", changes);
-console.log("Average Change", "$", AverageChange);
 console.log("Greatest increase in profits", "Feb-2012",  "$", greatestIncrease);
 console.log("Greatest decrease in profits", "Sep-2013",  "$", greatestdecrease);
-
-
-for (let j=0; j<finances.length; j++){
-
-}
-//   changes = finances[i][1] - finances[i-1][1]
-
-//   totalchanges = totalchanges + changes  
-// console.log(TotalMonthlyChanges)
-// finances[i + 1][1] - finances[i][1]
-   
-  // changes = finances[i][1]  - finances[i-1][1]
