@@ -112,6 +112,9 @@ greatestdecrease = finances[i][1]
 console.log("Net Total Profit", "$",totalprofit);
 
 let averageChanges = totalprofit/finances.length;
-console.log("average change", "$", averageChanges);
+averageChanges.toFixed(2)
+console.log("average change", "$", averageChanges.toFixed(2)
+)
 console.log("Greatest increase in profits", "Feb-2012",  "$", greatestIncrease);
+
 console.log("Greatest decrease in profits", "Sep-2013",  "$", greatestdecrease);
